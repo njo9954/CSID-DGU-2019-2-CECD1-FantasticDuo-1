@@ -10,12 +10,12 @@
 </pre>
 
 
-### 프로젝트
+## 프로젝트
 
-드론의 소음 제거를 통한 구조 음성 인식률 향상
+드론의 소음 제거를 통한 구조 음성 인식률 향상<br><br>
 
 
-### 개발 환경
+## 개발 환경
 
 * OS : Windows 10
 
@@ -27,7 +27,7 @@
 
 * 구동 환경 : 라즈베리파이 3B // Windows 플랫폼에서도 가능
 
-* 테스트 드론 타입 : Helsel Zealot-X Standard	
+* 테스트 드론 타입 : Helsel Zealot-X Standard	<br><br><br>
 
 
 ## 설치하기
@@ -46,30 +46,30 @@ $ pip install -r requirements.txt
 </pre>
 
 - python3 설치되어 있다고 가정
-- 환경에 따라 특정 패키지가 설치되어 있지 않을 경우 개별 설치 필요
+- 환경에 따라 특정 패키지가 설치되어 있지 않을 경우 개별 설치 필요<br><br><br>
  
 ## 실행하기
 - 두 가지 실행 방식이 있습니다.
-- 1) 녹음된 파일로 실행, 2) 실시간으로 실행
+- ① 녹음된 파일로 실행,  ② 실시간으로 실행
 
-1) 녹음된 파일 실행
- -$ python run.py
-- input 폴더에 있는 wav 파일을 입력으로 받아 output 폴더에 출력
+1) 녹음된 파일 실행<br>
+ -$ python run.py<br>
+- input 폴더에 있는 wav 파일을 입력으로 받아 output 폴더에 출력<br>
 
-2) RT(realtime) 실행
--$ python run_RT.py
-- 콘솔창에 "wait for speaking"이라고 뜨면 마이크를 통해 wav 파일을 입력으로 받아 RT_output 폴더에 출력
+2) RT(realtime) 실행<br>
+-$ python run_RT.py<br>
+- 콘솔창에 "wait for speaking"이라고 뜨면 마이크를 통해 wav 파일을 입력으로 받아 RT_output 폴더에 출력<br><br>
 
 ## 실행결과
 ![alt image](waveform/dowha_ex.png)
 
-▲  -   "도와주세요.wav" before/after waveform example<br>
+▲  -   "도와주세요.wav"    Before/After waveform example<br><br>
 
-[alt image](waveform/guhea_ex.png)
+![alt image](waveform/guhea_ex.png)
 
-▲  -   "구해주세요" before/after waveform example<br>
+▲  -   "구해주세요"    Before/After waveform example<br><br>
 
 ## 프로젝트 설명
 <br>
-- 소개 영상(4:24) : https://www.youtube.com/watch?v=XPzpoxqYBM8&feature=youtu.be
-- 시연 영상(1:14) : https://www.youtube.com/watch?v=Jqven9-wE_A&feature=youtu.be 
+- 소개 영상(4:24) : https://www.youtube.com/watch?v=XPzpoxqYBM8&feature=youtu.be <br><br>
+- 시연 영상(1:14) : https://www.youtube.com/watch?v=Jqven9-wE_A&feature=youtu.be <br>
