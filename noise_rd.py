@@ -7,7 +7,7 @@ import math
 
 # path : wav파일의 위치
 # show_plot : 비교 그래프
-def reducing(path, show_plot=True):
+def reducing(path, show_plot=False):
     filename = path[path.rfind('/') + 1:]  # 파일 이름
     rate, raw = wave.read(path)       # wav 데이터
 
@@ -70,31 +70,37 @@ def reducing(path, show_plot=True):
 
         plt.show()
         pass
+    '''
+    freq = np.fft.fftfreq(filtered.shape[-1], 0.1)
+    plt.plot(np.fft.fftshift(freq), np.fft.fftshift(np.abs(filtered)) / len(filtered))
 
-    # freq = np.fft.fftfreq(filtered.shape[-1], 0.1)
-    # plt.plot(np.fft.fftshift(freq), np.fft.fftshift(np.abs(filtered)) / len(filtered))
+    r_spec = np.fft.fft(raw_data)
+    r_freq = np.fft.fftfreq(raw_data.size, 1/rate)
+    r_mask = r_freq > 0
 
-    # r_spec = np.fft.fft(raw_data)
-    # r_freq = np.fft.fftfreq(raw_data.size, 1/rate)
-    # r_mask = r_freq > 0
+    f_spec = np.fft.fft(filtered)
+    f_freq = np.fft.fftfreq(filtered.size, 1/rate)
+    f_mask = f_freq > 0
 
-    # f_spec = np.fft.fft(filtered)
-    # f_freq = np.fft.fftfreq(filtered.size, 1/rate)
-    # f_mask = f_freq > 0
+    fig, axs = plt.subplots(2, 1)
+    fig.subplots_adjust(hspace=0.5)
+    axs[0].plot(r_freq[r_mask], np.abs(r_spec[r_mask]))
+    axs[0].set_xlim(0, 1500)
+    axs[0].set_xlabel("Frequency(HZ)")
+    axs[0].set_ylabel("Magnitude")
 
-    # fig, axs = plt.subplots(2, 1)
-    # fig.subplots_adjust(hspace=0.5)
-    # axs[0].plot(r_freq[r_mask], np.abs(r_spec[r_mask]))
-    # axs[0].set_xlim(0, 1500)
-    # axs[0].set_xlabel("Frequency(HZ)")
-    # axs[0].set_ylabel("Magnitude")
+    axs[1].plot(f_freq[f_mask], np.abs(f_spec[f_mask]))
+    axs[1].set_xlim(0, 1500)
+    axs[1].set_xlabel("Frequency(Hz)")
+    axs[1].set_ylabel("Magnitude")
+    plt.show()
+    '''
+    if filename[0:8]=='realtime':
+        i = 1
+        wave.write(f'RT_output/{filename}_'+str(i), rate, filtered)  # Wav 포맷으로 파일을 출력함
+        i +=1
 
-    # axs[1].plot(f_freq[f_mask], np.abs(f_spec[f_mask]))
-    # axs[1].set_xlim(0, 1500)
-    # axs[1].set_xlabel("Frequency(Hz)")
-    # axs[1].set_ylabel("Magnitude")
-    # plt.show()
+    else:
+        wave.write(f'output/{"filtered_"+filename}', rate, filtered)  # output 파일 생성
 
-    wave.write(f'output/{"filtered_"+filename}',
-               rate, filtered)  # output 파일 생성
     return rate, filename

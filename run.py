@@ -1,6 +1,6 @@
 import os
-import noise_rd
 import speech_recognition as sr  # 음성인식 관련 라이브러리
+import noise_rd
 
 if __name__ == "__main__":
     # raw 데이터(드론 노이즈 + 보이스), 음성인식기
