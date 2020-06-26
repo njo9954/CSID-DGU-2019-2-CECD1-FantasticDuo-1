@@ -97,7 +97,8 @@ def reducing(path, show_plot=False):
     '''
     if filename[0:8]=='realtime':
         i = 1
-        wave.write(f'RT_output/{filename}_'+str(i), rate, filtered)  # Wav 포맷으로 파일을 출력함
+        filename = "RT_filtered"
+        wave.write(f'RT_output/{filename}_'+str(i)+'.wav', rate, filtered)  # Wav 포맷으로 파일을 출력함
         i +=1
 
     else:
