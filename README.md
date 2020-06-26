@@ -52,12 +52,12 @@ $ pip install -r requirements.txt
 - 두 가지 실행 방식이 있습니다.
 - ① 녹음된 파일로 실행,  ② 실시간으로 실행
 
-1) 녹음된 파일 실행<br>
+① 녹음된 파일 실행<br>
 <pre>
     - $ python run.py<br>
     - input 폴더에 있는 wav 파일을 입력으로 받아 output 폴더에 출력</pre><br>
 
-2) RT(realtime) 실행<br>
+② RT(realtime) 실행<br>
 <pre>
     - $ python run_RT.py<br>
     - 콘솔창에 "wait for speaking"이라고 뜨면 마이크를 통해 wav 파일을 입력으로 받아 RT_output 폴더에 출력</pre><br><br><br>
