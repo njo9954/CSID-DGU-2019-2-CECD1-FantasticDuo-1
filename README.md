@@ -1,41 +1,72 @@
-<<<<<<< HEAD
-﻿# Python-Remove-Background-Noise
+﻿# 2019-2-CECD1-FanDu-1
+
+* 컴퓨터공학 종합설계_2 팀 판듀(FantasticDuo) 프로젝트 저장소 입니다.
+
+### 팀원
+
+<pre>
+팀장 : 백수현
+팀원 : 남정욱
+</pre>
 
 
-### 필터의 효과
+### 프로젝트
 
-![alt image](Figure_for_sample_1.png)
-
-▲위-sample_1.wav, 아래-필터를 거친 sample_1.wav
-![alt image](Figure_for_sample_2.png)
-
-▲위-sample_2.wav, 아래-필터를 거친 sample_2.wav
-
-직접 필터를 거친 샘플 청취를 해보면 드론의 소리는 대부분 사라지고
-사람의 목소리만 남아있다.
-
-### 필터의 원리
-사람의 음역대는 대략 300-3000Hz 이다. 
-그러나 다른 소음의 음역대와 겹치는 부분을 최대한 줄이기 위해 
-그 중 450-750Hz의 음역만 유지하고 나머지 부분은 소거하였다.
-
-그래서 시끄러운 환경에서도 상대적으로 조용한 사람의 목소리를 들을 수 있다.
-
-### 필터의 한계점
-+ 사람의 음역대를 축소하였기 때문에 
-설정한 음역대를 초월하는 목소리를 낸다면 필터 과정에서 소거 될 수 있다.
-+ 다른 사람이나 기계가 해당 음역대에 의도적으로 잡음을 만드는 것은 막을 수 없다. 
-
-### 사용법
-python 3.7을 설치하고 requirements.txt 에 있는 라이브러를 설치한다. \
-resource 에 필터를 거치고자하는 오디오 파일을 wav 로 입력후  main.py를 실행하면
-output 에 같은 이름으로 필터를 거친 오디오 파일이 생성된다. 
+드론의 소음 제거를 통한 구조 음성 인식률 향상
 
 
-### 참조
-- https://en.wikipedia.org/wiki/Voice_frequency
-- https://en.wikipedia.org/wiki/Low-pass_filter
-- https://en.wikipedia.org/wiki/High-pass_filter
-=======
-종설 판듀팀입니다.
->>>>>>> origin/master
+### 개발 환경
+
+* OS : Windows 10
+
+* 사용언어 : Python 3.7
+
+* 사용모듈 : numpy, scipy, matplotlib, speech_recognition, math, os
+
+* 개발툴 : Visual Studio Code, Jupyter Notebook, google Colab
+
+* 구동 환경 : 라즈베리파이 3B // Windows 플랫폼에서도 가능
+
+* 테스트 드론 타입 : Helsel Zealot-X Standard	
+
+
+### 설치하기
+
+* clone
+<pre>
+$ git clone https://github.com/CSID-DGU/2019-2-CECD1-FanDu-1
+</pre>
+
+
+* 패키지 설치하기
+<pre>
+$ cd 디렉터리내부
+$ pip install --upgrade pip
+$ pip install -r requirements.txt
+</pre>
+
+- python3 설치되어 있다고 가정
+- 환경에 따라 특정 패키지가 설치되어 있지 않을 경우 개별 설치
+ 
+### 실행하기
+1) 녹음된 파일 실행
+-$ python run.py
+= input 폴더에 있는 wav 파일을 입력으로 받아 output 폴더에 출력
+
+2) RT(realtime) 실행
+-$ python run_RT.py
+= 콘솔창에 "wait for speaking"이라고 뜨면
+= 마이크를 통해 wav 파일을 입력으로 받아 RT_output 폴더에 출력
+
+### 실행결과
+![alt image](waveform/dowha_Ex.jpg)
+
+▲  -   "도와주세요.wav" before/after waveform example
+
+[alt image](waveform/guhea_Ex.jpg)
+
+▲  -   "구해주세요" before/after waveform example
+
+### 프로젝트 설명
+- 소개 영상(4:24) : https://www.youtube.com/watch?v=XPzpoxqYBM8&feature=youtu.be
+- 시연 영상(1:14) : https://www.youtube.com/watch?v=Jqven9-wE_A&feature=youtu.be 
