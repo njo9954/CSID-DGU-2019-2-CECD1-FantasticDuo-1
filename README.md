@@ -53,12 +53,14 @@ $ pip install -r requirements.txt
 - ① 녹음된 파일로 실행,  ② 실시간으로 실행
 
 1) 녹음된 파일 실행<br>
- -$ python run.py<br>
-- input 폴더에 있는 wav 파일을 입력으로 받아 output 폴더에 출력<br>
+<pre>
+    - $ python run.py<br>
+    - input 폴더에 있는 wav 파일을 입력으로 받아 output 폴더에 출력</pre><br>
 
 2) RT(realtime) 실행<br>
--$ python run_RT.py<br>
-- 콘솔창에 "wait for speaking"이라고 뜨면 마이크를 통해 wav 파일을 입력으로 받아 RT_output 폴더에 출력<br><br>
+<pre>
+    - $ python run_RT.py<br>
+    - 콘솔창에 "wait for speaking"이라고 뜨면 마이크를 통해 wav 파일을 입력으로 받아 RT_output 폴더에 출력</pre><br><br><br>
 
 ## 실행결과
 ![alt image](waveform/dowha_ex.png)
@@ -67,7 +69,7 @@ $ pip install -r requirements.txt
 
 ![alt image](waveform/guhea_ex.png)
 
-▲  -   "구해주세요"    Before/After waveform example<br><br>
+▲  -   "구해주세요"    Before/After waveform example<br><br><br>
 
 ## 프로젝트 설명
 <br>
