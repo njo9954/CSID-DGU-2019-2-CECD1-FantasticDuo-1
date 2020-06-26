@@ -30,7 +30,7 @@
 * 테스트 드론 타입 : Helsel Zealot-X Standard	
 
 
-### 설치하기
+## 설치하기
 
 * clone
 <pre>
@@ -46,27 +46,30 @@ $ pip install -r requirements.txt
 </pre>
 
 - python3 설치되어 있다고 가정
-- 환경에 따라 특정 패키지가 설치되어 있지 않을 경우 개별 설치
+- 환경에 따라 특정 패키지가 설치되어 있지 않을 경우 개별 설치 필요
  
-### 실행하기
+## 실행하기
+- 두 가지 실행 방식이 있습니다.
+- 1) 녹음된 파일로 실행, 2) 실시간으로 실행
+
 1) 녹음된 파일 실행
--$ python run.py
-= input 폴더에 있는 wav 파일을 입력으로 받아 output 폴더에 출력
+ -$ python run.py
+- input 폴더에 있는 wav 파일을 입력으로 받아 output 폴더에 출력
 
 2) RT(realtime) 실행
 -$ python run_RT.py
-= 콘솔창에 "wait for speaking"이라고 뜨면
-= 마이크를 통해 wav 파일을 입력으로 받아 RT_output 폴더에 출력
+- 콘솔창에 "wait for speaking"이라고 뜨면 마이크를 통해 wav 파일을 입력으로 받아 RT_output 폴더에 출력
 
-### 실행결과
-![alt image](waveform/dowha_Ex.jpg)
+## 실행결과
+![alt image](waveform/dowha_ex.png)
 
-▲  -   "도와주세요.wav" before/after waveform example
+▲  -   "도와주세요.wav" before/after waveform example<br>
 
-[alt image](waveform/guhea_Ex.jpg)
+[alt image](waveform/guhea_ex.png)
 
-▲  -   "구해주세요" before/after waveform example
+▲  -   "구해주세요" before/after waveform example<br>
 
-### 프로젝트 설명
+## 프로젝트 설명
+<br>
 - 소개 영상(4:24) : https://www.youtube.com/watch?v=XPzpoxqYBM8&feature=youtu.be
 - 시연 영상(1:14) : https://www.youtube.com/watch?v=Jqven9-wE_A&feature=youtu.be 
