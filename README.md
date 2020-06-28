@@ -45,22 +45,41 @@ $ pip install --upgrade pip
 $ pip install -r requirements.txt
 </pre>
 
+<pre>
 - python3 설치되어 있다고 가정
-- 환경에 따라 특정 패키지가 설치되어 있지 않을 경우 개별 설치 필요<br><br><br>
+- 환경에 따라 특정 패키지가 설치되어 있지 않을 경우 개별 설치 필요</pre><br><br><br>
  
-## 실행하기
-- 두 가지 실행 방식이 있습니다.
-- ① 녹음된 파일로 실행,  ② 실시간으로 실행
+## <u> **source code 설명** </u>
+<pre>
+ - run.py : 녹음된 파일을 실행하는 모듈
+ - run_RT.py : 마이크로 입력된 실시간 음성을 실행하는 모듈
+ - noise_rd.py : 소음 제거 수행 모듈 // run, run_RT에서 사용 <br><br>
 
-① 녹음된 파일 실행<br>
+## 디렉터리 설명
+<pre>
+- input : run 모듈 실행 시 입력 *.wav 파일 입력 받아오는 폴더
+- output : run 모듈 실행 시, 소음 제거 수행 후 *.wav 파일 출력하는 폴더
+- signal : run 모듈 실행 후 구조요청이라 판단시*.wav 파일 출력하는 폴더</pre><br>
+<pre>
+- RT_output : run_RT 모듈 실행 시, 소음 제거 수행 후 *.wav 파일 출력하는 폴더
+- RT_signal : run_RT 모듈 실행 후 구조요청이라 판단시*.wav 파일 출력하는 폴더
+</pre><br><br><br>
+
+## 실행하기
+<pre>
+- 두 가지 실행 방식이 있습니다.
+1.  녹음된 파일로 실행,  2. 실시간으로 실행</pre>/br>
+<ol>
+<li> 녹음된 파일 실행 </li><br>
 <pre>
     - $ python run.py<br>
     - input 폴더에 있는 wav 파일을 입력으로 받아 output 폴더에 출력</pre><br>
 
-② RT(realtime) 실행<br>
+<li> RT(realtime) 실행 </li><br>
 <pre>
     - $ python run_RT.py<br>
     - 콘솔창에 "wait for speaking"이라고 뜨면 마이크를 통해 wav 파일을 입력으로 받아 RT_output 폴더에 출력</pre><br><br><br>
+</ol>
 
 ## 실행결과
 ![alt image](waveform/dowha_ex.png)
