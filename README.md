@@ -92,5 +92,5 @@ $ pip install -r requirements.txt
 
 ## 프로젝트 설명
 <br>
-- 소개 영상(4:24) : https://www.youtube.com/watch?v=XPzpoxqYBM8&feature=youtu.be <br><br>
-- 시연 영상(1:14) : https://www.youtube.com/watch?v=Jqven9-wE_A&feature=youtu.be <br>
+- 소개 영상(3:48) : https://youtu.be/7fW_0DiFdU4 <br><br>
+- 시연 영상(1:14) : https://youtu.be/jJ02XZmbc-k <br>
